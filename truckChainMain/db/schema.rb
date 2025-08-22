@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_08_125912) do
     t.float "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "is_available", default: false
+    t.boolean "is_available", default: true
     t.integer "driver_id"
     t.index ["driver_id"], name: "index_trucks_on_driver_id"
   end
