@@ -102,6 +102,22 @@ This project aims to provide a secure, transparent, and efficient system for fle
 ```
 Open your browser and go to http://localhost:3000
 
+**To create the first admin user directly from the command line, open the Rails console:**
+
+```bash
+   bin/rails console
+
+   #create a command-line admin as the first user and the default user for logging in
+   User.create!(
+      email: "admin@gmail.com", 
+      full_name: "Admin", 
+      role: "ADMIN", 
+      password: "admin123", 
+      password_confirmation: "admin123", 
+      confirmed_at: Time.now
+   )
+```
+
 ### Testing 
 ```bash
    bin/rails test --seed
